@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_pokemon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_pokemon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_pokemon"
+        tools:text="Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Weight:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tv_weight"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/tv_pokemon"
+        app:layout_constraintTop_toBottomOf="@id/tv_pokemon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/text_weight"
+        app:layout_constraintEnd_toStartOf="@id/text_height"
+        app:layout_constraintStart_toEndOf="@id/text_weight"
+        app:layout_constraintTop_toTopOf="@id/text_weight"
+        tools:text="Weight" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_weight"
+        app:layout_constraintEnd_toStartOf="@id/tv_height"
+        app:layout_constraintStart_toEndOf="@id/tv_weight"
+        app:layout_constraintTop_toTopOf="@id/tv_weight" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/text_height"
+        app:layout_constraintEnd_toEndOf="@id/tv_pokemon"
+        app:layout_constraintStart_toEndOf="@id/text_height"
+        app:layout_constraintTop_toTopOf="@id/text_height"
+        tools:text="Height" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_species"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Species:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/text_weight"
+        app:layout_constraintTop_toBottomOf="@id/tv_height" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_species"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_height"
+        app:layout_constraintStart_toEndOf="@id/text_species"
+        app:layout_constraintTop_toTopOf="@id/text_species"
+        tools:text="species" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_types"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Types:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/text_weight"
+        app:layout_constraintTop_toBottomOf="@id/tv_species" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_types"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_species"
+        app:layout_constraintStart_toEndOf="@id/text_types"
+        app:layout_constraintTop_toTopOf="@id/text_types"
+        tools:text="types" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_save_pokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/egg_com"
+        app:backgroundTint="@android:color/holo_blue_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="img_pokemon, text_weight, tv_weight, text_height, tv_height, text_species, tv_species, text_types, tv_types, fb_save_pokemon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
